@@ -8,8 +8,8 @@ GRANT ALL PRIVILEGES ON * . * TO 'jaime'@'localhost'; #da maximos privilegios al
 flush privileges; #reinicia todos los permisos para aplicar cambios
 create database web; #crea DB para el login web
 use web;
-CREATE TABLE usuarios(nombre VARCHAR(30),apellidos VARCHAR(30),user VARCHAR(30) PRIMARY KEY UNIQUE,pas>
-INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('test', 'test', 'test@test.es', 'test>
+CREATE TABLE usuarios (nombre VARCHAR(30),apellidos VARCHAR(30),user VARCHAR(30) PRIMARY KEY UNIQUE,password VARCHAR(100));
+INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('test', 'test', 'test@test,es', 'test');
 EOF
 
 sudo rm -r /var/www/html/*
