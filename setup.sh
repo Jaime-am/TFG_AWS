@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo apt install mysql-server mariadb-server -y
+sudo apt install mysql-server -y
+sudo apt install mariadb-server -y
 sudo service mysql start
 sudo service mariadb start
 sudo rm -r /var/www/html/*
