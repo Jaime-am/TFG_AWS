@@ -1,8 +1,10 @@
 #!/bin/bash
 
+sudo apt install apache2 -y
 sudo apt install mysql-server -y
 sudo apt install php -y
 sudo apt install php-mysqli -y
+sudo service apache2 start
 sudo service mysql start
 sudo mysql -u root <<-EOF
 CREATE USER 'jaime'@'localhost' IDENTIFIED BY ''; #crea usuario en mysql
