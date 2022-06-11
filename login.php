@@ -3,7 +3,7 @@
 //Cargamos variables para entablar conexion con mysql
 $dbhost = "localhost";
 $dbuser = "jaime";
-$dbpass = "jaimeae15";
+$dbpass = "";
 $dbname = "web";
 
 //Trataremos la conexion con mysql como una variable: conn
