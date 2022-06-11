@@ -1,9 +1,9 @@
 #!/bin/bash
 
-apt install apache2 -y
-apt install mysql-server -y
-apt install php -y
-apt install php-mysqli -y
+sudo apt install apache2 -y
+sudo apt install mysql-server -y
+sudo apt install php -y
+sudo apt install php-mysqli -y
 service apache2 start
 service mysql start
 mysql -u root <<-EOF
