@@ -39,7 +39,7 @@ $nr = mysqli_num_rows($query);
 //En caso de login exitoso
 if($nr == 1)
 {
-	header("Location: index.htm");
+	header("Location: form_cv.html");
 	
 }
 //En caso de login no exitoso
