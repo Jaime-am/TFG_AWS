@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS `form` (
   `apellidos` varchar(200) NOT NULL,
   `archivo_nombre` varchar(200) NOT NULL,
   `archivo_tipo` varchar(200) NOT NULL,
-  `archivo_binario` longblob NOT NULL
-  `comentarios` varchar(200) NOT NULL,
+  `archivo_binario` longblob NOT NULL,
+  `comentarios` varchar(200) NOT NULL
 );
 EOF
 
