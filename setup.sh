@@ -19,6 +19,20 @@ CREATE TABLE usuarios (nombre VARCHAR(30),apellidos VARCHAR(30),user VARCHAR(30)
 INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('test', 'test', 'test@test.es', 'test');
 EOF
 
+sudo mysql -u jaime <<-EOF
+
+DROP TABLE IF EXISTS `form`;
+CREATE TABLE IF NOT EXISTS `form` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nombre` varchar(200) NOT NULL,
+  `apellidos` varchar(200) NOT NULL,
+  `archivo_nombre` varchar(200) NOT NULL,
+  `archivo_tipo` varchar(200) NOT NULL,
+  `archivo_binario` longblob NOT NULL
+  `comentarios` varchar(200) NOT NULL,
+);
+EOF
+
 sudo rm -r /var/www/html/*
 sudo mv /TFG_AWS/* /var/www/html
 sudo mv /var/www/html/sign-up-login-form/dist/* /var/www/html
