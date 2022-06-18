@@ -8,7 +8,7 @@ sudo mv 20-mysqli.ini /etc/php/8.1/apache2/conf.d/
 
 #Creamos un usuario www-data y lo añadimos al grupo www-data
 #para que pueda gestionar Apache la carpeta uploads
-adduser www-data www-data
+sudo adduser www-data www-data
 sudo chown -R www-data:www-data /var/www
 sudo chmod -R g+rwX /var/www
 sudo mkdir /var/www/html/uploads
