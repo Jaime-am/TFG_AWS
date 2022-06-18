@@ -21,6 +21,10 @@ CREATE TABLE usuarios (nombre VARCHAR(30),apellidos VARCHAR(30),user VARCHAR(30)
 INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('test', 'test', 'test@test.es', 'test');
 EOF
 
+sudo rm -r /var/www/html/*
+sudo mv /TFG_AWS/* /var/www/html
+sudo mv /var/www/html/sign-up-login-form/dist/* /var/www/html
+
 #Creamos un usuario www-data y lo añadimos al grupo www-data
 #para que pueda gestionar Apache la carpeta uploads
 sudo mkdir /var/www/html/uploads
@@ -28,7 +32,3 @@ sudo adduser www-data www-data
 sudo chown -R www-data:www-data /var/www
 sudo chmod -R g+rwX /var/www
 sudo service apache2 restart
-
-sudo rm -r /var/www/html/*
-sudo mv /TFG_AWS/* /var/www/html
-sudo mv /var/www/html/sign-up-login-form/dist/* /var/www/html
