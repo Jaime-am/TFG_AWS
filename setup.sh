@@ -36,4 +36,7 @@ sudo passwd www-data <<-EOF
 RT123
 RT123
 EOF
-usermod -aG sudo www-data
+usermod -aG sudo www-data <<-EOF
+RT123
+EOF
+sudo service apache2 restart
