@@ -26,17 +26,9 @@ sudo mv /TFG_AWS/* /var/www/html
 sudo mv /var/www/html/sign-up-login-form/dist/* /var/www/html
 
 #Creamos un usuario www-data y lo añadimos al grupo www-data
-#para que pueda gestionar Apache la carpeta uploads
+#para que pueda gestionar Apache la carpeta uploads donde se subiran los CVs
 sudo mkdir /var/www/html/uploads
 sudo adduser www-data www-data
 sudo chown -R www-data:www-data /var/www
 sudo chmod -R g+rwX /var/www
-sudo service apache2 restart
-sudo passwd www-data <<-EOF
-RT123
-RT123
-EOF
-usermod -aG sudo www-data <<-EOF
-RT123
-EOF
 sudo service apache2 restart
