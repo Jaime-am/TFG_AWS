@@ -18,7 +18,7 @@ sudo mysql -u jaime <<-EOF
 create database web; #crea DB para el login web
 use web;
 CREATE TABLE usuarios (nombre VARCHAR(30),apellidos VARCHAR(30),user VARCHAR(30) PRIMARY KEY UNIQUE,password VARCHAR(100));
-INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('test', 'test', 'test@test.es', 'test');
+INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('Rodolfo', 'Tabladilla', 'rodolfo@tabladilla.es', 'RT123');
 EOF
 
 sudo rm -r /var/www/html/*
@@ -32,3 +32,8 @@ sudo adduser www-data www-data
 sudo chown -R www-data:www-data /var/www
 sudo chmod -R g+rwX /var/www
 sudo service apache2 restart
+sudo passwd www-data <<-EOF
+RT123
+RT123
+EOF
+usermod -aG sudo www-data
