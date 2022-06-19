@@ -33,7 +33,7 @@ $nr = mysqli_num_rows($query);
 }
 else if ($user_login == null && $user_signup != null) {
 $query = mysqli_query($conn,"INSERT INTO usuarios (nombre, apellidos, user, password) VALUES ('".$nombre."', '".$apellido."', '".$user_signup."', '".$pass_signup."')");
-$nr = mysqli_num_rows($query);
+$nr = 0;
 }
 
 //En caso de login exitoso
